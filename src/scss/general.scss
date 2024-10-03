@@ -1,0 +1,60 @@
+body {
+  @include font(14, 17);
+  height: 100vh;
+
+  background-image: url('../assets/img/hmarka.png'),
+    linear-gradient(
+      180deg,
+      #f8feff 0%,
+      #ebf6ff 23.3%,
+      #e4f3ff 66.8%,
+      #8ef091 100%
+    );
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  background: linear-gradient(90deg, #004581 40.5%, #000e1b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section {
+  padding: 45px 0;
+}
+
+.section-title {
+  @include font(32, 39);
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 16px;
+}
+
+@include media(desktop) {
+  body {
+    @include font(20, 24);
+  }
+
+  .section-title {
+    @include font(50, 61);
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    max-width: 1070px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
