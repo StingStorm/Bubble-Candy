@@ -1,0 +1,63 @@
+.htp-list {
+  display: flex;
+  row-gap: 190px;
+
+  background-image: url('/assets/img/how-to-play/purple-donut-bg.png'),
+    url('/assets/img/how-to-play/orange-donut-bg.png'),
+    url('/assets/img/how-to-play/green-donut-bg.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 10px) calc(25% - 45px), 50% calc(50% + 30px),
+    50% calc(80% + 15px);
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-descr {
+    max-width: 228px;
+    margin-bottom: -20px;
+  }
+}
+
+@include media(to-desktop) {
+  .htp-list {
+    flex-direction: column;
+    align-items: center;
+
+    &__item:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@include media(desktop) {
+  .htp-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 103px 157px;
+
+    background-position: calc(50% - 200px) calc(50% - 85px),
+      calc(50% + 190px) calc(50% - 95px), 50% calc(50% + 370px);
+  }
+}
+
+.cloud-overlay {
+  @include font(13, 16);
+  position: absolute;
+  bottom: -63px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 264px;
+  height: 134px;
+
+  background-image: url(/assets/img/how-to-play/overlay-cloud.png);
+}
+
+.weight-accent {
+  font-weight: 500;
+}
