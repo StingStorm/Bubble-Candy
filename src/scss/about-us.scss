@@ -1,0 +1,68 @@
+.about-us-text {
+  margin-bottom: 10px;
+}
+
+.about-us-ellipses-wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ellipse-1 {
+  animation: ellipse-1-anim 10s ease-in-out 0s infinite normal both;
+}
+
+.ellipse-2 {
+  animation: ellipse-1-anim 10s ease-in-out 1000ms infinite normal both;
+}
+
+.ellipse-3 {
+  animation: ellipse-1-anim 10s ease-in-out 100ms infinite normal both;
+}
+
+.ellipse-4 {
+  animation: ellipse-1-anim 10s ease-in-out 600ms infinite normal both;
+}
+
+.ellipse-5 {
+  animation: ellipse-1-anim 10s ease-in-out 2500ms infinite normal both;
+}
+
+.ellipse-6 {
+  animation: ellipse-1-anim 10s ease-in-out 1500ms infinite normal both;
+}
+
+.ellipse-7 {
+  animation: ellipse-1-anim 10s ease-in-out 1100ms infinite normal both;
+}
+
+@keyframes ellipse-1-anim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translate(4px, 8px);
+  }
+
+  70% {
+    transform: translate(9px, 8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
