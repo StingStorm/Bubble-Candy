@@ -50,6 +50,7 @@ p {
 
   .section-title {
     @include font(50, 61);
+    margin-bottom: 48px;
   }
 
   .section {
