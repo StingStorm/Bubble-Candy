@@ -1,7 +1,7 @@
 body {
   @include font(14, 17);
 
-  background-image: url('../assets/img/hmarka.png'),
+  background-image: url('/assets/img/hmarka.png'),
     linear-gradient(
       180deg,
       #f8feff 0%,
