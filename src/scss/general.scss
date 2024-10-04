@@ -32,6 +32,7 @@ p {
 
 .section-title {
   @include font(32, 39);
+  margin-bottom: 20px;
 }
 
 .container {

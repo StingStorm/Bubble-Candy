@@ -1,0 +1,27 @@
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px 16px;
+
+  &__item {
+    flex-basis: calc((100% - 16px) / 2);
+    padding: 20px 14px;
+    border-radius: 20px;
+  }
+
+  &__item:nth-child(1) {
+    background: linear-gradient(154deg, #f09cfa 0%, #b464ca 100%);
+  }
+
+  &__item:nth-child(2) {
+    background: linear-gradient(159deg, #bdf61a 0%, #6f900f 99.25%);
+  }
+
+  &__item:nth-child(3) {
+    background: linear-gradient(152deg, #ffdc45 0%, #f6970a 100%);
+  }
+
+  &__item:nth-child(4) {
+    background: linear-gradient(154deg, #1cdfef 0%, #0b9deb 100%);
+  }
+}
