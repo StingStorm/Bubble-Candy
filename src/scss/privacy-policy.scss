@@ -1,0 +1,28 @@
+.t-and-c-container {
+  margin-top: -40px;
+  padding-top: 18px;
+  padding-bottom: 45px;
+}
+
+.t-and-c-icon {
+  margin-right: 8px;
+}
+
+.t-and-c-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include font(24, 29);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.t-and-c-subtitle {
+  @include font(16, 25);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.t-and-c-text {
+  margin-bottom: 8px;
+}
