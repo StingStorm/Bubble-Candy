@@ -32,7 +32,10 @@ ul {
 }
 
 a {
-  color: currentColor;
+  background: linear-gradient(90deg, #004581 40.5%, #000e1b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
 
