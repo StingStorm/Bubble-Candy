@@ -14,18 +14,79 @@
     />
     
     <script type="module" crossorigin src="/Bubble-Candy/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/Bubble-Candy/assets/styles-466b348d.css">
+    <link rel="stylesheet" href="/Bubble-Candy/assets/styles-a0fe5409.css">
   </head>
   <body>
     <header class="header">
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, non in
-    quod voluptatibus atque ipsa eos aut, saepe soluta praesentium dolore
-    numquam architecto itaque! Doloremque, voluptas. Eius natus eos tempora.
-  </p>
+  <div class="container header-container">
+    <a href="/" class="header-link"
+      ><img src="../assets/img/logo-main-24x24.webp" alt="main logo"
+    /></a>
+    <button
+      type="button"
+      class="header-menu-button open js-open-menu"
+      aria-expanded="false"
+      aria-controls="mob-menu"
+    >
+      <svg class="header-burger-icon" width="24" height="24">
+        <use href="../assets/sprite.svg#icon-FilterRight"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="overlay-menu js-menu-container">
+    <div class="mobile-menu">
+      <button type="button" class="header-menu-button close js-close-menu">
+        <svg class="header-burger-icon" width="24" height="24">
+          <use href="../assets/sprite.svg#icon-XLg"></use>
+        </svg>
+      </button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">About the Game</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Benefits</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">How to Play</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-copyright">
+        <p>
+          <a href="/">Privacy Policy</a> / <a href="/">Terms and conditions</a>
+        </p>
+        <p>&copy;2024 GreatStarQuest.com, All rights reserved</p>
+      </div>
+    </div>
+  </div>
 </header>
 
-    
+    <section class="hero" id="home">
+  <div class="container hero-container">
+    <img
+      class="hero-video"
+      src="../assets/img/hero-temporary-image.jpg"
+      alt="temporary"
+    />
+    <h1 class="hero-title">Bubble Candy</h1>
+    <p class="hero-text">
+      Pop the bubbles, solve puzzles, and dive into a world of sweet candy!
+    </p>
+    <a
+      class="hero-button"
+      href="#"
+      class="link"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      ><img
+        class="hero-img"
+        src="../assets/img/button-google-play-black-288.png"
+        alt="Google Play download icon"
+    /></a>
+  </div>
+</section>
+
     
     
     
@@ -33,6 +94,12 @@
     
     
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     
   </body>
 </html>
