@@ -1,6 +1,5 @@
 body {
   @include font(14, 17);
-  height: 100vh;
 
   background-image: url('../assets/img/hmarka.png'),
     linear-gradient(
@@ -11,6 +10,7 @@ body {
       #8ef091 100%
     );
   background-repeat: no-repeat;
+  padding-top: 40px;
 }
 
 h1,
@@ -37,6 +37,7 @@ p {
 .container {
   max-width: 320px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 @include media(desktop) {

@@ -1,0 +1,29 @@
+.hero {
+  padding-top: 28px;
+  padding-bottom: 45px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video {
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  @include font(40, 48);
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.hero-text {
+  @include font(16, 19);
+  text-align: left;
+  margin-bottom: 14px;
+}
