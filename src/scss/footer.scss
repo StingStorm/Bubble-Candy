@@ -1,0 +1,40 @@
+.footer {
+  @include font(12, 15);
+  font-weight: 300;
+  color: #fff;
+
+  width: 100%;
+  padding: 8px 0;
+  background-color: $_footer_bg_color;
+}
+
+.footer-container {
+  display: flex;
+  gap: 6px;
+}
+
+.legal-links > a {
+  transition: color 150ms linear;
+}
+
+.legal-links > a:hover,
+.legal-links > a:focus {
+  color: #004581;
+}
+
+@include media(to-desktop) {
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+}
+
+@include media(desktop) {
+  .footer {
+    @include font(16, 19);
+    padding: 20.5px 0;
+  }
+
+  .footer-container {
+    justify-content: space-between;
+  }
+}
