@@ -1,4 +1,5 @@
 import faq from './accordion-data.json';
+import sprite from '../../assets/sprite.svg';
 
 const accThumb = document.querySelector('.accordion-thumb');
 
@@ -11,7 +12,7 @@ export function renderAccordions() {
           <svg width="24" height="24">
             <use
               class="accordion-chevron-down"
-              href="/assets/sprite.svg#icon-ChevronDown"
+              href="${sprite}#icon-ChevronDown"
             ></use>
           </svg>
         </button>
