@@ -43,6 +43,13 @@ p {
   margin: 0 auto;
 }
 
+.link {
+  background: linear-gradient(90deg, #004581 40.5%, #000e1b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @include media(desktop) {
   body {
     @include font(20, 24);

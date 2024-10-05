@@ -17,13 +17,11 @@
 .hero-title {
   @include font(40, 48);
   font-weight: 500;
-  text-align: left;
   margin-bottom: 8px;
   width: 100%;
 }
 
 .hero-text {
   @include font(16, 19);
-  text-align: left;
   margin-bottom: 14px;
 }
