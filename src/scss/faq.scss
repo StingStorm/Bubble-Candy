@@ -2,3 +2,83 @@
   padding-top: 45px;
   padding-bottom: 90px;
 }
+
+.accordion-thumb {
+  width: 100%;
+}
+
+.accordion-wrapper {
+  border-radius: 15px;
+  padding: 16px 14px;
+  background-color: #fff;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.accordion {
+  @include font(16, 19);
+  font-family: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+
+  &-chevron-down {
+    opacity: 1;
+
+    transform-origin: center;
+    transition: transform 200ms linear;
+  }
+
+  &.active &-chevron-down {
+    transform: scaleY(-1);
+  }
+
+  & > svg {
+    flex-shrink: 0;
+  }
+}
+
+.panel {
+  @include font(12, 15);
+  padding-top: 8px;
+
+  max-width: 218px;
+  max-height: 0;
+
+  overflow: hidden;
+  transition: max-height 200ms linear;
+}
+
+@include media(desktop) {
+  .accordion-thumb {
+    max-width: 862px;
+    margin: 0 auto;
+  }
+
+  .accordion-wrapper {
+    padding: 20px 24px;
+  }
+
+  .accordion {
+    @include font(32, 39);
+
+    & > svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .panel {
+    @include font(20, 24);
+    padding-top: 14px;
+    max-width: 790px;
+  }
+}
