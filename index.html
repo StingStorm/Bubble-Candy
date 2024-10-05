@@ -14,12 +14,14 @@
     />
     
     <script type="module" crossorigin src="/Bubble-Candy/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/Bubble-Candy/assets/styles-b0687ad4.css">
+    <link rel="modulepreload" crossorigin href="/Bubble-Candy/assets/vendor-25e36fe5.js">
+    <link rel="stylesheet" href="/Bubble-Candy/assets/vendor-0ded8c46.css">
+    <link rel="stylesheet" href="/Bubble-Candy/assets/styles-cf5929f8.css">
   </head>
   <body>
     <header class="header">
   <div class="container header-container">
-    <a href="/" class="header-link"
+    <a href="#home" class="header-link"
       ><img src="data:image/webp;base64,UklGRuYDAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSDsAAAABLyAQSDR3HyaNiAg4KIokNVooBGwcYCEObgfx72Z55h3R/wm4hLQXrnIkim4V4vutwlRsHq76uBSwBwBWUDgghAMAANAYAJ0BKhgAGAAAAAAlsAJ0yhHA3gH4gfkdzhmrnZH9pMpZ4A/rX5O/2D3Qcwj/Sfxm4AH6l/5X+k8IB+inWS/qB7Cf66ejD/qv8B8D/63f5D+q/AZ+l1yA/Dn9SeyL73+sn7R5b56h+M37VaoB/IP5d+Mn5b7AB6mXxr+q/jl+TPoAcUP+KvGz9Qn+Ff3L8iP7B8AP8l+QHrW+Hv757gH8V/ln9Z/rX7M/3j/9/QB6pf1V9i/9ADcIsbH1FQY6OknTPtbhCMGu0ckb1VsKAAD+64ALfzlJ46amNL5aLC3Vs6LTWbb056mQxV1Zt2aJPzMqkX8KZf/+GCa0iiZPYYeH03zuOM6Tzpz1Obw/6l7MjgSRrYrY2vUCyjYijNo+KK65dMpF2SiysaG5jQy/PG9wHVE2ALb0rZvDudn9C4xm8T9C31oG11wwtAU/tmFo/+FiaD4awAWM9E/3lP4/vik0u8s+Ah5xmnYwPofnqjSYcv5Af8lH+dr/5+hbTq0gbhvkp8v/+wT9l7WMfKXxMR6RTe1J6Sh663Bakv/9XNFYgHC2vVikI58ztXAo6TbHgKfuOrWRFrDeQ5cx2+4Ah+Ot2cCUm8ePz3/+Oi9zwg9Q1hSW6jGVtErHK8OpT6nCTE2i8H4dUmzPiCifXzyJ9dJKZ6Bqf/Smy3EpXRAecwVF8JwqA9kHu8GXUmxnP6lAsfw7BJUfNC3OO1cLgT1kE/pcCygX6Jv+pPwuuYjYAukSlklV7hYe9yK5DeB3/pvLsHzMkpjv+vWDJKJQ5jN79M8gjokjdoV6qaD3ZdZeyxvzFJ3piHEvefsHm1JUyquPAkyciFTnBFeEunRfPih+vLuOIbJ0WJ6RkbpTT1HSb9eatz+7faMgiOXuwScXgA1//4MMKWamSikUawPPcMN6T3+2Q1AIy0KD+1idgVpvosSf/4kKLmpuYbBAXKYRiMv/s0Y5MFdsBRqkV7JZAdsb7m91pnYyPtoCF2pR8igX+n/nlcMu6aSsU4KnVf6oanF8r2Wf/EDeo7Q+VHj6/kNXOolim4zy1R//vkOda879l/JxJKkuo1YmpVOlF/1OGn+bSZ0pzElSGb1/6NWdiC+jnxXKIC32oKrEFLlHkDckbYRf/60aTksaKGH+/Fe+TIiP8Lycx8N8RiXmMZB8FC89oK4uJtLB85yXh3wx7v6atwjot2AAAA==" alt="main logo"
     /></a>
     <button
@@ -46,10 +48,16 @@
           <li class="nav-item">
             <a class="nav-link" href="#about-us">About the Game</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="/">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="/">Benefits</a></li>
-          <li class="nav-item"><a class="nav-link" href="/">How to Play</a></li>
-          <li class="nav-item"><a class="nav-link" href="/">FAQ</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-to-play">How to Play</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="mobile-menu-copyright">
@@ -66,26 +74,36 @@
     <main>
       <section class="hero" id="home">
   <div class="container hero-container">
-    <img
+    <video
+      width="240"
+      height="401"
+      controls
+      autoplay
+      muted
+      loop
       class="hero-video"
-      src="/Bubble-Candy/assets/hero-temporary-image-0992940f.jpg"
-      alt="temporary"
-    />
-    <h1 class="hero-title">Bubble Candy</h1>
-    <p class="hero-text">
-      Pop the bubbles, solve puzzles, and dive into a world of sweet candy!
-    </p>
-    <a
-      class="hero-button"
-      href="#"
-      class="link"
-      target="_blank"
-      rel="noopener noreferrer nofollow"
-      ><img
-        class="hero-img"
-        src="/Bubble-Candy/assets/button-google-play-black-288-97dcb58f.png"
-        alt="Google Play download icon"
-    /></a>
+    >
+      <source src="../assets/video/bubble-candy-demo.webm" type="video/webm" />
+      <source src="../assets/video/bubble-candy-demo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-cta">
+      <h1 class="hero-title">Bubble Candy</h1>
+      <p class="hero-text">
+        Pop the bubbles, solve puzzles, and dive into a world of sweet candy!
+      </p>
+      <a
+        class="hero-button"
+        href="https://play.google.com/store/apps/details?id=com.ezjoynetwork.bubblecandy"
+        class="link"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="hero-img"
+          src="/Bubble-Candy/assets/button-google-play-black-9eed104e.png"
+          alt="Google Play download icon"
+      /></a>
+    </div>
   </div>
 </section>
 
@@ -133,8 +151,56 @@
   </div>
 </section>
 
-      
-      <section class="section">
+      <section class="section" id="gallery">
+  <div class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            src="../assets/img/gallery/gallery-slide-1.jpg"
+            alt="game screenshot"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../assets/img/gallery/gallery-slide-2.jpg"
+            alt="game screenshot"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../assets/img/gallery/gallery-slide-3.jpg"
+            alt="game screenshot"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../assets/img/gallery/gallery-slide-4.jpg"
+            alt="game screenshot"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../assets/img/gallery/gallery-slide-5.jpg"
+            alt="game screenshot"
+          />
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="section" id="benefits">
   <div class="container">
     <h2 class="section-title">Benefits</h2>
     <ul class="benefits-list">
@@ -166,7 +232,7 @@
   </div>
 </section>
 
-      <section class="section">
+      <section class="section" id="how-to-play">
   <div class="container">
     <h2 class="section-title">How to play</h2>
     <ul class="htp-list">
@@ -239,7 +305,7 @@
   </div>
 </section>
 
-      <section class="faq-section">
+      <section class="faq-section" id="faq">
   <div class="container">
     <h2 class="section-title">FAQ</h2>
   </div>
