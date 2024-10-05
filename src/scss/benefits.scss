@@ -35,11 +35,16 @@
   .benefits-list {
     flex-wrap: wrap;
   }
+
+  .cannon {
+    display: none;
+  }
 }
 
 @include media(desktop) {
   .benefits-list {
     gap: 0px 24px;
+    margin-bottom: 168px;
 
     &__item {
       @include font(32, 39);
@@ -51,6 +56,84 @@
     &__item > svg {
       width: 40px;
       height: 40px;
+    }
+  }
+
+  .cannon {
+    position: relative;
+    width: 163px;
+    height: 215px;
+
+    margin: 0 auto;
+    cursor: pointer;
+    transform-origin: center;
+    animation: rotation 3000ms ease-in-out infinite alternate;
+  }
+
+  .cannon[data-clickMe]::before {
+    content: 'click!';
+    position: absolute;
+    left: -30%;
+    top: 40%;
+    color: black;
+    opacity: 0;
+    animation: fliking 1500ms ease-in infinite;
+  }
+
+  .cannon[data-clickMe]::after {
+    content: 'click!';
+    position: absolute;
+    top: 80%;
+    right: -30%;
+    color: black;
+    opacity: 0;
+    animation: fliking 1500ms ease-in 750ms infinite;
+  }
+
+  @keyframes fliking {
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  .cannonball {
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    &.animation {
+      animation: loading 500ms ease-in-out;
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(90deg);
+    }
+
+    50% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+
+  @keyframes loading {
+    0% {
+      top: 10%;
+    }
+
+    100% {
+      top: -75px;
     }
   }
 }

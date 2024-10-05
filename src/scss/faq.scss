@@ -48,13 +48,16 @@
 
 .panel {
   @include font(12, 15);
-  padding-top: 8px;
 
   max-width: 218px;
   max-height: 0;
 
   overflow: hidden;
   transition: max-height 200ms linear;
+
+  & p {
+    padding-top: 8px;
+  }
 }
 
 @include media(desktop) {
@@ -78,7 +81,10 @@
 
   .panel {
     @include font(20, 24);
-    padding-top: 14px;
     max-width: 790px;
+
+    & p {
+      padding-top: 14px;
+    }
   }
 }
