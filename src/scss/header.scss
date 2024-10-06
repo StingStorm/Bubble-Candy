@@ -72,6 +72,17 @@
   margin-bottom: 24px;
 }
 
+.header-nav-wrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-desktop {
+  margin-right: 48px;
+}
+
 .nav-list {
   display: flex;
   flex-direction: column;
@@ -86,9 +97,53 @@
   text-align: end;
 }
 
+.nav-desktop-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  @include font(20, 24);
+}
+
+.nav-desktop-item {
+  display: flex;
+  background: linear-gradient(90deg, #004581 40.5%, #000e1b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-desktop-link {
+  padding: 28px 0;
+}
+
+.header-google-play-button {
+  padding: 13px 0;
+}
+
 .mobile-menu-copyright {
   @include font(12, 15);
   font-weight: 300;
   margin-top: auto;
   text-align: end;
+}
+
+@include media(to-desktop) {
+  .header-nav-wrp {
+    display: none;
+  }
+}
+
+@include media(desktop) {
+  .header-link {
+    padding: 10px 0;
+  }
+
+  .header-menu-button {
+    display: none;
+  }
+
+  .overlay-menu {
+    display: none;
+  }
 }

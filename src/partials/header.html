@@ -1,8 +1,61 @@
 <header class="header">
   <div class="container header-container">
     <a href="#home" class="header-link"
-      ><img src="/assets/img/logo-main-24x24.webp" alt="main logo"
-    /></a>
+      ><picture
+        ><source
+          srcset="
+            /assets/img/logo-main-24x24.webp  1x,
+            /assets/img/logo-main-500x500.png 2x
+          "
+          media="(max-width: 1199.98px)"
+          width="24"
+          height="24" />
+        <source
+          srcset="/assets/img/logo-main-500x500.png"
+          media="(min-width: 1200px)"
+          width="60"
+          height="60" />
+        <img src="/assets/img/logo-main-500x500.png" alt="main logo" /></picture
+    ></a>
+    <div class="header-nav-wrp">
+      <nav class="nav-desktop">
+        <ul class="nav-desktop-list">
+          <li class="nav-desktop-item">
+            <a class="nav-desktop-link" href="#home">Home</a>
+          </li>
+          <li class="nav-desktop-item">
+            <a class="nav-desktop-link" href="#about-us">About the Game</a>
+          </li>
+          <li class="nav-desktop-item">
+            <a class="nav-desktop-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-desktop-item">
+            <a class="nav-desktop-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-desktop-item">
+            <a class="nav-desktop-link" href="#how-to-play">How to Play</a>
+          </li>
+          <li class="nav-desktop-item">
+            <a class="nav-desktop-link" href="#faq">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        class="header-google-play-button"
+        href="https://play.google.com/store/apps/details?id=com.ezjoynetwork.bubblecandy"
+        class="link"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <img
+          src="/assets/img/button-google-play-black-header@1x.png"
+          alt="google play button"
+          srcset="
+            /assets/img/button-google-play-black-header@1x.png 1x,
+            /assets/img/button-google-play-black-header@2x.png 2x
+          "
+      /></a>
+    </div>
     <button
       type="button"
       class="header-menu-button open js-open-menu"

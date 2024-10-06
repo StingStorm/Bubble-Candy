@@ -25,3 +25,36 @@
   @include font(16, 19);
   margin-bottom: 14px;
 }
+
+@include media(desktop) {
+  .hero {
+    padding-top: 42px;
+    padding-bottom: 50px;
+  }
+
+  .hero-container {
+    flex-direction: row-reverse;
+    gap: 156px;
+  }
+
+  .hero-video {
+    margin-bottom: 0;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 488px;
+  }
+
+  .hero-title {
+    @include font(64, 77);
+    margin-bottom: 0;
+  }
+
+  .hero-text {
+    @include font(24, 29);
+    margin-bottom: 0;
+  }
+}
