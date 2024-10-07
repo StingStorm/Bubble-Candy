@@ -26,6 +26,11 @@
   margin-bottom: 14px;
 }
 
+.hero-button {
+  display: block;
+  width: fit-content;
+}
+
 @include media(desktop) {
   .hero {
     padding-top: 42px;
