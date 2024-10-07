@@ -66,6 +66,7 @@
 
     margin: 0 auto;
     cursor: pointer;
+    user-select: none;
     transform-origin: center;
     animation: rotation 3000ms ease-in-out infinite alternate;
   }
@@ -90,50 +91,48 @@
     animation: fliking 1500ms ease-in 750ms infinite;
   }
 
-  @keyframes fliking {
-    50% {
-      opacity: 0;
-    }
+  // @keyframes fliking {
+  //   50% {
+  //     opacity: 0;
+  //   }
 
-    100% {
-      opacity: 1;
-      transform: scale(1.2);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: scale(1.2);
+  //   }
+  // }
 
   .cannonball {
     position: absolute;
     top: -75px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 2;
 
-    &.animation {
-      animation: loading 500ms ease-in-out;
-    }
+    transition: transform 1000ms linear;
   }
 
-  @keyframes rotation {
-    0% {
-      transform: rotate(90deg);
-    }
+  .bullet {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    background-image: url('../assets/img/candy-cannon/brown-cannonball.png');
 
-    50% {
-      transform: rotate(0);
+    transition: transform 1000ms linear;
+  }
+
+  .bullet.animated {
+    animation: blabla 1000ms linear forwards;
+  }
+
+  @keyframes blabla {
+    75% {
+      opacity: 0.85;
     }
 
     100% {
-      transform: rotate(-90deg);
-    }
-  }
-
-  @keyframes loading {
-    0% {
-      top: 10%;
-    }
-
-    100% {
-      top: -75px;
+      opacity: 0;
     }
   }
 }
