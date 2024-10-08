@@ -33,7 +33,3 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-swiper.width = 500;
-
-console.log(swiper.width);
