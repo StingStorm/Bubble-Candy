@@ -24,6 +24,26 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  // Стилі нижче потрібні для перебивання стилей swiper pagination bullets
+  --swiper-navigation-top-offset: calc(50% - 20px);
+  --swiper-pagination-color: transparent;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-width: 16px;
+  --swiper-pagination-bullet-height: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bottom: 2px;
+}
+
+@include media(desktop) {
+  :root {
+    --swiper-pagination-bullet-size: 20px;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-height: 20px;
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+  }
 }
 
 // Стилі нижче потрібні для того щоб фіксований хедер не перекривав частину секції, до якої перейшли до якірному посиланню

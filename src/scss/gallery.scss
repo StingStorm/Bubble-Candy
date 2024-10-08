@@ -1,12 +1,20 @@
-.swiper {
-  width: 100%;
-  height: 100%;
+.gallery-container {
+  padding: 0 8px;
 }
 
-.swiper-slide {
+.swiper {
+  width: 302px;
+  height: 398px;
+}
+
+.swiper .swiper-wrapper {
+  width: 242px;
+}
+
+.swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .swiper-slide img {
@@ -16,24 +24,23 @@
   object-fit: cover;
 }
 
-.swiper-button-prev {
-  background-image: url('/assets/ChevronLeft.svg') !important;
+.swiper-button-prev,
+.swiper-button-next {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  left: -4px !important;
   width: 24px !important;
   height: 24px !important;
 }
 
+.swiper-button-prev {
+  background-image: url('/assets/ChevronLeft.svg') !important;
+  left: -4px !important;
+}
+
 .swiper-button-next {
   background-image: url('/assets/ChevronRight.svg') !important;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
   right: -4px !important;
-  width: 24px !important;
-  height: 24px !important;
 }
 
 .swiper-button-next::after {
@@ -42,4 +49,74 @@
 
 .swiper-button-prev::after {
   display: none;
+}
+
+.swiper-pagination .swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-size: 16px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  transition: transform 250ms ease-in-out;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  transform: scale(1.7);
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(1) {
+  background-image: url(/assets/img/gallery/ellipse-blue.png);
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(2) {
+  background-image: url(/assets/img/gallery/ellipse-brown.png);
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(3) {
+  background-image: url(/assets/img/gallery/ellipse-pink.png);
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(4) {
+  background-image: url(/assets/img/gallery/ellipse-green.png);
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(5) {
+  background-image: url(/assets/img/gallery/ellipse-orange.png);
+}
+
+@include media(desktop) {
+  .gallery-container {
+    padding: 0 15px;
+  }
+
+  .gallery-container .swiper {
+    width: 918px;
+    height: 433px;
+    padding: 0 32px;
+  }
+
+  .swiper .swiper-wrapper {
+    width: 100%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    transform: scale(1.75);
+  }
 }

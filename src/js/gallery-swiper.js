@@ -15,10 +15,11 @@ const swiper = new Swiper('.swiper', {
   // },
   grabCursor: true,
   slidesPerView: 1,
-  spaceBetween: 24,
+  spaceBetween: 0,
   breakpoints: {
     1200: {
       slidesPerView: 3,
+      spaceBetween: 24,
     },
   },
   // If we need pagination
@@ -32,3 +33,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+swiper.width = 500;
+
+console.log(swiper.width);
