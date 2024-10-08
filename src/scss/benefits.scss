@@ -66,12 +66,14 @@
 
     margin: 0 auto;
     cursor: pointer;
+    user-select: none;
+    pointer-events: none;
     transform-origin: center;
     animation: rotation 3000ms ease-in-out infinite alternate;
   }
 
   .cannon[data-clickMe]::before {
-    content: 'click!';
+    content: 'Shoot!';
     position: absolute;
     left: -30%;
     top: 40%;
@@ -81,7 +83,7 @@
   }
 
   .cannon[data-clickMe]::after {
-    content: 'click!';
+    content: 'Shoot!';
     position: absolute;
     top: 80%;
     right: -30%;
@@ -105,25 +107,13 @@
     position: absolute;
     top: -75px;
     left: 50%;
+    width: 40px;
+    height: 40px;
     transform: translateX(-50%);
     z-index: -1;
 
     &.animation {
-      animation: loading 500ms ease-in-out;
-    }
-  }
-
-  @keyframes rotation {
-    0% {
-      transform: rotate(90deg);
-    }
-
-    50% {
-      transform: rotate(0);
-    }
-
-    100% {
-      transform: rotate(-90deg);
+      animation: loading 250ms ease-in-out;
     }
   }
 
@@ -134,6 +124,30 @@
 
     100% {
       top: -75px;
+    }
+  }
+
+  .bullet {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    background-image: url('../assets/img/candy-cannon/brown-cannonball.png');
+
+    transition: transform 1000ms linear;
+  }
+
+  .bullet {
+    animation: fly 1000ms linear forwards;
+  }
+
+  @keyframes fly {
+    75% {
+      opacity: 0.85;
+    }
+
+    100% {
+      opacity: 0;
     }
   }
 }
