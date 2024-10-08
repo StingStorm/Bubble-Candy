@@ -1,79 +1,71 @@
+import { throttle } from 'throttle-debounce';
+
 export class CannonController {
   static instance;
   cannonElement;
-  cannonBalls;
+  cannonballElement;
+  cannonballVariants = [];
   observer = new IntersectionObserver(this.#handleVisibilityChange.bind(this), {
-    threshold: 0,
+    threshold: 0.1,
   });
 
-  constructor(cannonElement, cannonBalls) {
+  constructor(cannonElement, cannonballElement, cannonballVariants) {
     if (CannonController.instance) {
       return CannonController.instance;
     }
 
     this.cannonElement = cannonElement;
-    this.cannonBalls = cannonBalls;
+    this.cannonballElement = cannonballElement;
+    this.cannonballVariants = [...cannonballVariants];
     this.observer.observe(this.cannonElement);
 
-    CannonController.instance = this;
+    this.cannonballElement.style.backgroundImage = `url(${
+      this.cannonballVariants[this.#getRandomIndex()]
+    })`;
 
-    document.addEventListener('click', this.shoot.bind(this));
+    this.throttledShoot = throttle(100, this.shoot, { noTrailing: true });
+
+    CannonController.instance = this;
   }
 
   startTraking() {
     document.addEventListener('mousemove', this.#rotateCannon);
+    document.addEventListener('click', this.throttledShoot);
   }
 
   stopTraking() {
     document.removeEventListener('mousemove', this.#rotateCannon);
+    document.removeEventListener('click', this.throttledShoot);
   }
 
-  shoot(event) {
+  shoot = event => {
     const { rawAngle } = this.#calcAngle(event);
 
-    const bulletX =
-      this.cannonElement.offsetLeft + this.cannonElement.offsetWidth / 2;
-    const bulletY =
-      this.cannonElement.offsetTop + this.cannonElement.offsetHeight / 2;
-
-    const bullet = document.createElement('div');
-    bullet.classList.add('bullet');
-    document.body.appendChild(bullet);
-
-    bullet.style.left = `${bulletX}px`;
-    bullet.style.top = `${bulletY}px`;
+    if (rawAngle > 0) {
+      return;
+    }
 
     const angle = (rawAngle * Math.PI) / 180;
 
-    const distance = 900;
+    const flyingCannonboll = this.#createFlyingCannonball(angle);
+    const cannonballVariant = this.cannonballVariants[this.#getRandomIndex()];
+
+    this.cannonballElement.style.backgroundImage = `url(${cannonballVariant})`;
+    this.cannonballElement.classList.remove('animation');
+
+    const distance = window.innerWidth / 2 - 200;
     const translateX = Math.cos(angle) * distance;
     const translateY = Math.sin(angle) * distance;
 
-    setTimeout(() => {
-      bullet.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px))`;
-      bullet.classList.add('animated');
-    }, 10);
+    requestAnimationFrame(() => {
+      this.cannonballElement.classList.add('animation');
+      flyingCannonboll.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    });
 
     setTimeout(() => {
-      bullet.remove();
+      flyingCannonboll.remove();
     }, 1000);
-  }
-
-  //   shoot(event) {
-  //     const { rawAngle } = this.#calcAngle(event);
-
-  //     this.cannonBalls.style.left = `${this.cannonElement.offsetLeft}px`;
-  //     this.cannonBalls.style.top = `${this.cannonElement.offsetTop}px`;
-
-  //     const angle = (-90 * Math.PI) / 180;
-  //     const speed = 500;
-  //     const translateX = Math.cos(angle) * speed;
-  //     const translateY = Math.sin(angle) * speed;
-
-  //     console.log(Math.cos(angle), Math.sin(angle));
-
-  //     this.cannonBalls.style.transform = `translate(${translateX}px, ${translateY}px)`;
-  //   }
+  };
 
   #handleVisibilityChange(entries) {
     entries.forEach(entry => {
@@ -106,5 +98,30 @@ export class CannonController {
     const corretedAngle = rawAngle + 90;
 
     return { rawAngle, corretedAngle };
+  }
+
+  #createFlyingCannonball(angle) {
+    const cannonCenterX =
+      this.cannonElement.offsetLeft + this.cannonElement.offsetWidth / 2;
+    const cannonCenterY =
+      this.cannonElement.offsetTop + this.cannonElement.offsetHeight / 2;
+
+    const bulletOffsetY = 163;
+    const bulletX = cannonCenterX + Math.cos(angle) * bulletOffsetY;
+    const bulletY = cannonCenterY + Math.sin(angle) * bulletOffsetY;
+
+    const bullet = document.createElement('div');
+    bullet.classList.add('bullet');
+    document.body.appendChild(bullet);
+
+    bullet.style.left = `${bulletX}px`;
+    bullet.style.top = `${bulletY}px`;
+    bullet.style.backgroundImage = this.cannonballElement.style.backgroundImage;
+
+    return bullet;
+  }
+
+  #getRandomIndex() {
+    return Math.floor(Math.random() * this.cannonballVariants.length);
   }
 }
