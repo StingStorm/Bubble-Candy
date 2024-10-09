@@ -18,8 +18,3 @@ const cannon = document.querySelector('.cannon');
 const cannonBall = document.querySelector('.cannonball');
 
 new CannonController(cannon, cannonBall, cannonballVariants);
-//   if (cannon.hasAttribute('data-clickMe')) {
-//     cannon.removeAttribute('data-clickMe');
-//   }
-
-throttle;
