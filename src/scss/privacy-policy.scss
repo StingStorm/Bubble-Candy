@@ -19,20 +19,9 @@
 }
 
 body {
-  padding-top: 40px;
-  background-image: url('/assets/img/hmarka.png'), url('/assets/img/hmarka.png'),
-    url('/assets/img/hmarka.png'), url('/assets/img/hmarka.png'),
-    linear-gradient(
-      180deg,
-      #f8feff 0%,
-      #ebf6ff 23.3%,
-      #e4f3ff 66.8%,
-      #8ef091 100%
-    );
-  background-repeat: no-repeat;
   background-size: 355px 197px, 318px 176px, 249px 138px, 249px 138px, 100% 100%;
   background-position: calc(50% + 81px) -10px, calc(50% - 100px) 395px,
-    calc(50% + 75px) calc(50% - 254px), 10px 10px, 0 0;
+    calc(50% + 75px) calc(50% - 50px), calc(50% - 51px) calc(50% + 170px), 0 0;
 }
 
 @include media(desktop) {
