@@ -1,4 +1,5 @@
 .about-us-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,10 +10,23 @@
   margin-bottom: 10px;
 }
 
-.about-us-ellipses-wrp {
+.about-us-ellipses-wrp-mobile {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.about-us-ellipses-group-one {
+  position: absolute;
+  top: 64px;
+  left: 170px;
+}
+
+.about-us-ellipses-group-two {
+  position: absolute;
+  right: 221px;
+  bottom: 10px;
 }
 
 .ellipse-1 {
@@ -74,12 +88,47 @@
   }
 }
 
+@include media(to-desktop) {
+  .about-us-ellipses-wrp-desktop {
+    display: none;
+  }
+}
+
 @include media(desktop) {
   .about-us-container {
     align-items: center;
+    padding-bottom: 46px;
   }
 
   .about-us-text {
     max-width: 597px;
+  }
+
+  .about-us-ellipses-wrp-mobile {
+    display: none;
+  }
+
+  .ellipse-1 {
+    position: absolute;
+    left: 16px;
+    bottom: -47px;
+  }
+
+  .ellipse-3 {
+    position: absolute;
+    top: 11px;
+    right: -48px;
+  }
+
+  .ellipse-4 {
+    position: absolute;
+    top: -29px;
+    right: -26px;
+  }
+
+  .ellipse-6 {
+    position: absolute;
+    left: -44px;
+    bottom: 12px;
   }
 }

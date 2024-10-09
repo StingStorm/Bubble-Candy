@@ -48,6 +48,13 @@ p {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #08f 40.5%, #1961a1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @include media(desktop) {

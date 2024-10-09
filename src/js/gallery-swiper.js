@@ -9,10 +9,10 @@ import 'swiper/css/pagination';
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination, Autoplay],
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: true,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true,
+  },
   grabCursor: true,
   slidesPerView: 1,
   spaceBetween: 0,

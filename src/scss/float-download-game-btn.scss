@@ -1,0 +1,25 @@
+.float-btn-link {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 99;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #303030;
+  border-radius: 50%;
+  box-shadow: 0.3px 0.5px 0.7px hsl(200deg 22% 4% / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(200deg 22% 4% / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(200deg 22% 4% / 0.36),
+    5px 10px 12.6px -2.5px hsl(200deg 22% 4% / 0.36);
+  transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    box-shadow: 0.3px 0.5px 0.7px hsl(200deg 22% 4% / 0.34),
+      0.4px 0.8px 1px -1.2px hsl(200deg 22% 4% / 0.34),
+      1px 2px 2.5px -2.5px hsl(200deg 22% 4% / 0.34);
+  }
+}

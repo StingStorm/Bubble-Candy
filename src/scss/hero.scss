@@ -26,9 +26,20 @@
   margin-bottom: 14px;
 }
 
-.hero-button {
-  display: block;
-  width: fit-content;
+.hero-google-play-button {
+  padding: 8px 18px;
+  width: 253px;
+  height: 76px;
+  gap: 17px;
+}
+
+.hero-google-play-btn-icon {
+  width: 54px;
+  height: 60px;
+}
+
+.hero-google-play-btn-text {
+  @include font(24, 29);
 }
 
 @include media(desktop) {
