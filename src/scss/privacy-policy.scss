@@ -17,6 +17,11 @@
   margin-bottom: 24px;
 }
 
+.t-and-c-text-wrp {
+  max-width: 774px;
+  margin: 0 auto;
+}
+
 .t-and-c-subtitle {
   @include font(16, 25);
   font-weight: 500;
