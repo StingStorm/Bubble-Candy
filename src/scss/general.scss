@@ -66,9 +66,3 @@ p {
     margin: 0 auto;
   }
 }
-
-@include media(desktop) {
-  body {
-    padding-top: 80px;
-  }
-}
