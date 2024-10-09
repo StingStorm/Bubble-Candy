@@ -34,6 +34,16 @@ body {
     calc(50% + 74px) calc(50% - 350px), calc(50% - 51px) calc(50% - 50px), 0 0;
 }
 
+@include media(desktop) {
+  body {
+    background-size: 686px 380px, 448px 248px, 830px 460px, 612px 339px,
+      100% 100%;
+    background-position: calc(50% - 320px) 40px, calc(50% + 515px) 373px,
+      calc(50% - 220px) calc(50% - 90px), calc(50% + 471px) calc(50% + 265px),
+      0 0;
+  }
+}
+
 .t-and-c-container {
   margin-top: -40px;
   padding-top: 18px;
