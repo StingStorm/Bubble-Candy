@@ -1,16 +1,5 @@
 body {
   @include font(14, 17);
-
-  background-image: url('/assets/img/hmarka.png'),
-    linear-gradient(
-      180deg,
-      #f8feff 0%,
-      #ebf6ff 23.3%,
-      #e4f3ff 66.8%,
-      #8ef091 100%
-    );
-  background-repeat: no-repeat;
-  padding-top: 40px;
 }
 
 h1,

@@ -6,8 +6,6 @@
 @import './benefits.scss';
 @import './how-to-play.scss';
 @import './faq.scss';
-@import './privacy-policy.scss';
-@import './terms-and-conditions.scss';
 @import './footer.scss';
 @import './float-download-game-btn.scss';
 
@@ -37,6 +35,24 @@
   --swiper-pagination-bottom: -40px;
 }
 
+body {
+  background-image: url('/assets/img/hmarka.png'), url('/assets/img/hmarka.png'),
+    url('/assets/img/hmarka.png'), url('/assets/img/hmarka.png'),
+    linear-gradient(
+      180deg,
+      #f8feff 0%,
+      #ebf6ff 23.3%,
+      #e4f3ff 66.8%,
+      #8ef091 100%
+    );
+  background-repeat: no-repeat;
+  padding-top: 40px;
+
+  background-size: 355px 197px, 318px 176px, 249px 138px, 249px 138px, 100% 100%;
+  background-position: calc(50% + 80px) 549px, calc(50% - 99px) 954px,
+    calc(50% + 74px) calc(25% + 101px), calc(50% - 52px) calc(25% + 429px), 0 0;
+}
+
 @include media(desktop) {
   :root {
     --swiper-pagination-bullet-size: 20px;
@@ -44,6 +60,14 @@
     --swiper-pagination-bullet-height: 20px;
     --swiper-pagination-bullet-horizontal-gap: 6px;
     --swiper-pagination-bottom: -60px;
+  }
+
+  body {
+    background-size: 686px 380px, 448px 248px, 830px 460px, 612px 340px,
+      100% 100%;
+    background-position: calc(50% - 441px) 509px, calc(50% + 394px) 842px,
+      calc(50% - 345px) calc(50% - 660px), calc(50% + 351px) calc(50% - 140px),
+      0 0;
   }
 }
 
