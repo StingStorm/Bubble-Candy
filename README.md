@@ -1,2 +1,2 @@
-# Vanilla-vite-template
+# A commercial order for students
 
